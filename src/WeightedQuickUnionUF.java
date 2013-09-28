@@ -30,9 +30,15 @@ public class WeightedQuickUnionUF {
 
     // Return component identifier for component containing p
     public int find(int p) {
-        while (p != id[p])
-            p = id[p];
-        return p;
+        int root = p;
+        while (root != id[root])
+            root = id[root];
+        while (p != root) {
+            int newp = id[p];
+            id[p] = root;
+            p = newp;
+        }
+        return root;
     }
 
    // Are objects p and q in the same set?

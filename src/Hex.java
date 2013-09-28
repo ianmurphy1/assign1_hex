@@ -23,7 +23,7 @@ public class Hex implements BoardGame {
                 board[i][j] = 0;
 
         // TODO: Create instance WeightedQuickUnionUF class
-        // (n1 * n2) + 4 because we need an extra 4 to check whose won
+        // (n1 * n2) + 4 because we need an extra 4 to check who's won
         wqu = new WeightedQuickUnionUF((n1 * n2) + 4);
 
 	}
@@ -35,10 +35,18 @@ public class Hex implements BoardGame {
 	 */
 	@Override
 	public void takeTurn(int x, int y) {
+        x--; //Decrement to take into account player starting index at 1.
+        y--;
 
 		// TODO: check coords are valid
+        if (validCoords(x, y)) {
+            throw new IndexOutOfBoundsException("Invalid Coordinates");
+        }
+
+
 
 		// TODO: check if location is free and set to player's value(1 or 2).
+        if (isOpen);
 
 		// TODO: calculate location and neighbours location in
 		// WeightedQuickUnionUF data structure
@@ -97,7 +105,12 @@ public class Hex implements BoardGame {
 		// percolation test.
 		return false;
 	}
-	
+
+
+    private boolean validCoords(int x, int y) {
+        return (x < 0 || y < 0 || x > board.length || y > board.length);
+    }
+
 	/**
 	 * THIS IS OPTIONAL:
 	 * Modify the main method if you wish to suit your implementation.
