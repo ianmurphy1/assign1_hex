@@ -56,9 +56,9 @@ public class Hex implements BoardGame {
 
             if (valid && open) break;
 
-            if (!valid && open) {
+            if (!valid) {
                 StdOut.print("Not a valid coordinate!");
-            } else if (valid && !open) {
+            } else if (!open) {
                 StdOut.print("Occupied by Player " + board[x][y]);
             } else {
                 StdOut.print("Not valid and occupied by a player.");
@@ -151,7 +151,6 @@ public class Hex implements BoardGame {
 	}
 
     private void unionise(int x, int y, int index) {
-
         connectHomes(x, y, index);
     }
 
@@ -174,9 +173,9 @@ public class Hex implements BoardGame {
     }
 
     private boolean isOpen(int x, int y) {
-        if (board[x][y] == 0) return true;
-        else return false;
+        return board[x][y] == 0;
     }
+
 
 	/**
 	 * THIS IS OPTIONAL:
