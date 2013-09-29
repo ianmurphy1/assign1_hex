@@ -9,13 +9,22 @@ public class Hex implements BoardGame {
 										// of unions and calculate winner
 	
 	private int currentPlayer; // Current player in the game, initialised to 1
+    private int turnCount; //Keep check of turn count so not checking winner when we don't have to
 
-	public Hex(int n1, int n2) // create N-by-N grid, with all sites blocked
+    //Special sites for checking percolation
+    //Player 1 takes EAST -> WEST
+    private int EAST;
+    private int WEST;
+    //Player 2 takes NORTH -> SOUTH
+    private int NORTH;
+    private int SOUTH;
+
+    public Hex(int n1, int n2) // create N-by-N grid, with all sites blocked
 	{
         this.n1 = n1;
         this.n2 = n2;
+        turnCount = 0;
         currentPlayer = 1;
-
         // TODO: Create instance of board
         board = new int[n1][n2];
         for (int i = 0; i < board.length; i++)
@@ -25,7 +34,10 @@ public class Hex implements BoardGame {
         // TODO: Create instance WeightedQuickUnionUF class
         // (n1 * n2) + 4 because we need an extra 4 to check who's won
         wqu = new WeightedQuickUnionUF((n1 * n2) + 4);
-
+        EAST = board.length - 1;
+        WEST = board.length - 2;
+        NORTH = board.length - 3;
+        SOUTH = board.length - 4;
 	}
 
 	/*
@@ -35,28 +47,54 @@ public class Hex implements BoardGame {
 	 */
 	@Override
 	public void takeTurn(int x, int y) {
-        x--; //Decrement to take into account player starting index at 1.
-        y--;
 
-		// TODO: check coords are valid
-        if (validCoords(x, y)) {
-            throw new IndexOutOfBoundsException("Invalid Coordinates");
+        //Loop to make sure player gets to pick a valid coordinate
+        //and that choice is occupied
+        while (true) {
+            boolean valid = validCoords(x, y);
+            boolean open = isOpen(x, y);
+
+            if (valid && open) break;
+
+            if (!valid && open) {
+                StdOut.print("Not a valid coordinate!");
+            } else if (valid && !open) {
+                StdOut.print("Occupied by Player " + board[x][y]);
+            } else {
+                StdOut.print("Not valid and occupied by a player.");
+                StdOut.print("Specsavers?");
+            }
+            StdOut.print("Re-enter coordinates: ");
+            StdOut.print("x: ");
+            x = StdIn.readInt();
+            StdOut.print("y: ");
+            y = StdIn.readInt();
         }
 
+        //Change choice to current players value
+        board[x][y] = currentPlayer;
 
 
-		// TODO: check if location is free and set to player's value(1 or 2).
-        if (isOpen);
 
 		// TODO: calculate location and neighbours location in
 		// WeightedQuickUnionUF data structure
+        int index = changeTo2D(x, y);
+
+        unionise(x, y, index);
+
+
 
 		// TODO: create unions to neighbour sites in WeightedQuickUnionUF that
 		// also contain current players value
 
-		// TODO: if no winner get the next player
-
+        if (turnCount > 27) isWinner();
+        else nextPlayer();
+        turnCount++;
 	}
+
+    private int changeTo2D(int x, int y) {
+        return x * n1 + y;
+    }
 
 	
 
@@ -70,6 +108,10 @@ public class Hex implements BoardGame {
 		return currentPlayer;
 	}
 
+    /**
+     *
+     * @param currentPlayer
+     */
 	public void setCurrentPlayer(int currentPlayer) {
 		this.currentPlayer = currentPlayer;
 	}
@@ -84,6 +126,10 @@ public class Hex implements BoardGame {
 		return board;
 	}
 
+
+    /**
+     *
+     */
 	private void nextPlayer() {
 		if (currentPlayer == 1)
 			currentPlayer = 2;
@@ -99,16 +145,37 @@ public class Hex implements BoardGame {
 	 */
 	@Override
 	public boolean isWinner() {
-
-		// TODO:check if there is a connection between either side of the board.
-		// You can do this by using the 'virtual site' approach in the
-		// percolation test.
-		return false;
+		if (currentPlayer == 1) return wqu.connected(EAST, WEST);
+        else if (currentPlayer == 2) return wqu.connected(NORTH, SOUTH);
+        return false;
 	}
+
+    private void unionise(int x, int y, int index) {
+
+        connectHomes(x, y, index);
+    }
+
+    private void connectHomes(int x, int y, int index) {
+        if (currentPlayer == 1) {
+            if (y == 0) wqu.union(EAST, index);
+            if (y == board.length - 1) wqu.union(WEST, index);
+        }
+
+        if (currentPlayer == 2) {
+            if (x == 0) wqu.union(NORTH, index);
+            if (x == board.length - 1) wqu.union(SOUTH, index);
+        }
+    }
 
 
     private boolean validCoords(int x, int y) {
-        return (x < 0 || y < 0 || x > board.length || y > board.length);
+        //ANDed so it returns false as soon as an invalid coordinate is seen
+        return x >= 0 && y >= 0 && x < board.length && y < board.length;
+    }
+
+    private boolean isOpen(int x, int y) {
+        if (board[x][y] == 0) return true;
+        else return false;
     }
 
 	/**
@@ -138,5 +205,7 @@ public class Hex implements BoardGame {
 				+ " wins!");
 
 	}
+
+
 
 }
