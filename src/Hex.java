@@ -48,52 +48,30 @@ public class Hex implements BoardGame {
 	@Override
 	public void takeTurn(int x, int y) {
 
-        //Loop to make sure player gets to pick a valid coordinate
-        //and that choice is occupied
-        while (true) {
-            boolean valid = validCoords(x, y);
-            boolean open = isOpen(x, y);
-
-            if (valid && open) break;
-
-            if (!valid) {
-                StdOut.print("Not a valid coordinate!");
-            } else if (!open) {
-                StdOut.print("Occupied by Player " + board[x][y]);
-            } else {
-                StdOut.print("Not valid and occupied by a player.");
-                StdOut.print("Specsavers?");
-            }
-            StdOut.print("Re-enter coordinates: ");
-            StdOut.print("x: ");
-            x = StdIn.readInt();
-            StdOut.print("y: ");
-            y = StdIn.readInt();
+        if (validCoords(x, y) && isOpen(x, y)) {
+            board[x][y] = currentPlayer;
+            int index = changeTo2D(x, y);
+            unionise(x, y, index);
+            if (isWinner()) return;
+            nextPlayer();
+            return;
         }
 
-        //Change choice to current players value
-        board[x][y] = currentPlayer;
+        if (!validCoords(x, y)) StdOut.println("Invalid Co-Ordinates");
+        else if (!isOpen(x, y)) StdOut.println("Already Occupied.");
 
+        StdOut.println("Re-Enter Co-Ordinates: ");
 
-
-		// TODO: calculate location and neighbours location in
-		// WeightedQuickUnionUF data structure
-        int index = changeTo2D(x, y);
-
-        unionise(x, y, index);
-
-
-
-		// TODO: create unions to neighbour sites in WeightedQuickUnionUF that
-		// also contain current players value
-
-        if (turnCount > 27) isWinner();
-        else nextPlayer();
-        turnCount++;
 	}
 
+    /**
+     *
+     * @param x
+     * @param y
+     * @return
+     */
     private int changeTo2D(int x, int y) {
-        return x * n1 + y;
+        return (x * board.length) + y;
     }
 
 	
@@ -145,31 +123,49 @@ public class Hex implements BoardGame {
 	 */
 	@Override
 	public boolean isWinner() {
-		if (currentPlayer == 1) return wqu.connected(EAST, WEST);
+        if (currentPlayer == 1) return wqu.connected(EAST, WEST);
         else if (currentPlayer == 2) return wqu.connected(NORTH, SOUTH);
         return false;
 	}
 
     private void unionise(int x, int y, int index) {
-        connectHomes(x, y, index);
+        if (currentPlayer == 1 && (x == 0 || x == n1 - 1 )) {
+            connectHomes(x, y, index);
+            return;
+        } else if (currentPlayer == 2 && (y == 0 || y == n2 - 1)) {
+            connectHomes(x, y, index);
+            return;
+        }
+
+        if (y < n2 - 1 && board[x][y + 1] == currentPlayer) wqu.union(changeTo2D(x, y + 1), index);
+
+        if (y > 0 && board[x][y - 1] == currentPlayer) wqu.union(changeTo2D(x, y - 1), index);
+
+        if (x > 0 && board[x - 1][y] == currentPlayer) wqu.union(changeTo2D(x - 1, y), index);
+
+        if (x > 0 && y < n2 - 1 && board[x - 1][y + 1] == currentPlayer) wqu.union(changeTo2D(x - 1, y + 1), index);
+
+        if (x < n1 - 1 && board[x + 1][y] == currentPlayer) wqu.union(changeTo2D(x + 1, y), index);
+
+        if (x < n1 - 1 && y > 0 && board[x + 1][y - 1] == currentPlayer) wqu.union(changeTo2D(x + 1, y - 1), index);
     }
 
     private void connectHomes(int x, int y, int index) {
         if (currentPlayer == 1) {
             if (y == 0) wqu.union(EAST, index);
-            if (y == board.length - 1) wqu.union(WEST, index);
+            if (y == n2 - 1) wqu.union(WEST, index);
         }
 
         if (currentPlayer == 2) {
             if (x == 0) wqu.union(NORTH, index);
-            if (x == board.length - 1) wqu.union(SOUTH, index);
+            if (x == n1 - 1) wqu.union(SOUTH, index);
         }
     }
 
 
     private boolean validCoords(int x, int y) {
         //ANDed so it returns false as soon as an invalid coordinate is seen
-        return x >= 0 && y >= 0 && x < board.length && y < board.length;
+        return (x >= 0 && y >= 0 && x < n1 && y < n2);
     }
 
     private boolean isOpen(int x, int y) {
@@ -189,7 +185,39 @@ public class Hex implements BoardGame {
 
 		BoardGame hexGame = new Hex(4, 4);
 
-		while (!hexGame.isWinner()) {
+        System.out.println(hexGame.getBoard().length);
+        int arr[][] = hexGame.getBoard();
+        while (!hexGame.isWinner()) {
+        hexGame.takeTurn(2, 3);
+        hexGame.takeTurn(0, 1);
+
+
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                System.out.print(arr[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println();
+        hexGame.takeTurn(2, 1);
+        hexGame.takeTurn(0, 3);
+        hexGame.takeTurn(2, 0);
+        hexGame.takeTurn(0, 2);
+        hexGame.takeTurn(2, 2);
+
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                System.out.print(arr[i][j]);
+            }
+            System.out.println();
+        }
+        }
+        System.out.println("It's over. Player " + hexGame.getCurrentPlayer()
+                + " wins!");
+        System.exit(0);
+		/*while (!hexGame.isWinner()) {
 			System.out.println("It's player " + hexGame.getCurrentPlayer()
 					+ "'s turn");
 			System.out.println("Enter x and y location:");
@@ -201,9 +229,19 @@ public class Hex implements BoardGame {
 		}
 
 		System.out.println("It's over. Player " + hexGame.getCurrentPlayer()
-				+ " wins!");
+				+ " wins!");*/
 
 	}
+
+    public void printGrid() {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length; j++) {
+                StdOut.print(board[i][j]);
+            }
+            StdOut.println();
+        }
+
+    }
 
 
 

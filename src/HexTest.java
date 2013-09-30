@@ -34,9 +34,33 @@ public class HexTest {
 		assertFalse(hex.isWinner());
 		
 	}
-	
-	
-	/**
+
+    /**
+     * This test checks a player 2 win scenario
+     * This is using the board as it is shown in the spec.
+     * In this case, player 2 tries to connect the top to the bottom(Yellow edges in image in specification)
+     */
+    @Test
+    public void HexGamePlayer2WinTestTemp() {
+        BoardGame hex = new Hex(14,14);
+
+        int j=0;
+        assertFalse(hex.isWinner());
+
+        for (int i:hex.getBoard()[0]){
+            hex.takeTurn(j, 0);
+            assertFalse(hex.isWinner());
+            hex.takeTurn(j, 1);
+            j++;
+        }
+
+        assertTrue(hex.isWinner() && hex.getCurrentPlayer()==2);
+
+    }
+
+
+
+    /**
 	 * This test checks a player 2 win scenario
 	 * This is using the board as it is shown in the spec.
 	 * In this case, player 2 tries to connect the top to the bottom(Yellow edges in image in specification)
