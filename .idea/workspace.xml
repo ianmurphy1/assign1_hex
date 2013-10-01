@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb66d0a1-e146-43f3-a02b-f34a9011f875" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Hex.java" afterPath="$PROJECT_DIR$/src/Hex.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HexTest.java" afterPath="$PROJECT_DIR$/src/HexTest.java" />
     </list>
     <ignored path="Hex.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Hex.java" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1380617702076" ignored="false" />
+    <file path="/Hex.java" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1380651180617" ignored="false" />
     <file path="/Dummy.txt" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1380651015955" ignored="false" />
     <file path="/WeightedQuickUnionUF.java" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1380477369287" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -80,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hex.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Hex.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Hex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="5" selection-start="2156" selection-end="2156" vertical-scroll-proportion="0.0">
+            <state line="238" column="11" selection-start="6197" selection-end="6197" vertical-scroll-proportion="0.33570158">
               <folding />
             </state>
           </provider>
@@ -98,10 +96,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeightedQuickUnionUF.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WeightedQuickUnionUF.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WeightedQuickUnionUF.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="20" selection-start="2029" selection-end="2029" vertical-scroll-proportion="0.0">
+            <state line="66" column="76" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -465,7 +463,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -483,9 +481,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5911414" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15681818" sideWeight="0.5911414" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4088586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -654,16 +652,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hex.java">
+    <entry file="file://$PROJECT_DIR$/src/WeightedQuickUnionUF.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="5" selection-start="2156" selection-end="2156" vertical-scroll-proportion="0.0">
+        <state line="66" column="76" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WeightedQuickUnionUF.java">
+    <entry file="file://$PROJECT_DIR$/src/Hex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="20" selection-start="2029" selection-end="2029" vertical-scroll-proportion="0.0">
+        <state line="238" column="11" selection-start="6197" selection-end="6197" vertical-scroll-proportion="0.33570158">
           <folding />
         </state>
       </provider>

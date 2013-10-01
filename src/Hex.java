@@ -222,6 +222,7 @@ public class Hex implements BoardGame {
 		while (!hexGame.isWinner()) {
 			System.out.println("It's player " + hexGame.getCurrentPlayer()
 					+ "'s turn");
+            p
 			System.out.println("Enter x and y location:");
 			int x = StdIn.readInt();
 			int y = StdIn.readInt();
