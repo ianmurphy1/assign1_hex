@@ -3,12 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="cb66d0a1-e146-43f3-a02b-f34a9011f875" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Hex.java" afterPath="$PROJECT_DIR$/src/Hex.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HexTest.java" afterPath="$PROJECT_DIR$/src/HexTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WeightedQuickUnionUF.java" afterPath="$PROJECT_DIR$/src/WeightedQuickUnionUF.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Hex.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Hex.java" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1380651180617" ignored="false" />
-    <file path="/Dummy.txt" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1380651015955" ignored="false" />
-    <file path="/WeightedQuickUnionUF.java" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1380477369287" ignored="false" />
+    <file path="/Hex.java" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1380660927435" ignored="false" />
+    <file path="/Dummy.txt" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1380659812643" ignored="false" />
+    <file path="/WeightedQuickUnionUF.java" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1380660866474" ignored="false" />
+    <file path="/HexTest.java" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1380660974451" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,19 +82,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hex.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Hex.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Hex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="238" column="11" selection-start="6197" selection-end="6197" vertical-scroll-proportion="0.33570158">
+            <state line="102" column="19" selection-start="2542" selection-end="2542" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HexTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HexTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HexTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="44" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.0">
+            <state line="51" column="14" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.6343874">
               <folding />
             </state>
           </provider>
@@ -99,7 +103,7 @@
       <file leaf-file-name="WeightedQuickUnionUF.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WeightedQuickUnionUF.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="76" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.0">
+            <state line="72" column="17" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,16 +128,16 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/WeightedQuickUnionUF.java" />
-        <option value="$PROJECT_DIR$/src/HexTest.java" />
         <option value="$PROJECT_DIR$/src/Hex.java" />
+        <option value="$PROJECT_DIR$/src/HexTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -211,32 +215,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Hex">
-    <configuration default="false" name="HexTest.HexInitialisationTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Hex" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HexTest" />
-      <option name="METHOD_NAME" value="HexInitialisationTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Cover" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.HexTest.HexGamePlayer2WinTest">
     <configuration default="false" name="Hex" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Hex" />
@@ -250,29 +229,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Hex" />
       <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="HexTest.HexGameInvalidMoveTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Hex" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HexTest" />
-      <option name="METHOD_NAME" value="HexGameInvalidMoveTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -309,6 +265,52 @@
       <option name="MAIN_CLASS_NAME" value="HexTest" />
       <option name="METHOD_NAME" value="HexGamePlayer2WinTestTemp" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="HexTest.HexGamePlayer2WinTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Hex" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HexTest" />
+      <option name="METHOD_NAME" value="HexGamePlayer2WinTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="HexTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Hex" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HexTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -415,19 +417,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.HexTest.HexInitialisationTest" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Hex" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.HexTest.HexGameInvalidMoveTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.HexTest.HexGamePlayer1WinTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.HexTest.HexGamePlayer2WinTestTemp" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Hex" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.HexTest.HexGamePlayer1WinTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.HexTest.HexGamePlayer2WinTestTemp" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.HexTest.HexGamePlayer2WinTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.HexTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Hex" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.HexTest.HexGamePlayer2WinTestTemp" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.HexTest.HexGamePlayer1WinTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.HexTest.HexGameInvalidMoveTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.HexTest.HexInitialisationTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.HexTest.HexGamePlayer2WinTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.HexTest" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Hex" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.HexTest.HexGamePlayer2WinTestTemp" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.HexTest.HexGamePlayer1WinTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -462,8 +464,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -471,25 +473,25 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Kotlin" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5911414" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.5917686" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15681818" sideWeight="0.5911414" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4088586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40823138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Kotlin" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -645,23 +647,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HexTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="44" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/WeightedQuickUnionUF.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="76" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.0">
+        <state line="72" column="17" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Hex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="238" column="11" selection-start="6197" selection-end="6197" vertical-scroll-proportion="0.33570158">
+        <state line="102" column="19" selection-start="2542" selection-end="2542" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HexTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="14" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.6343874">
           <folding />
         </state>
       </provider>

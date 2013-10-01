@@ -34,10 +34,10 @@ public class Hex implements BoardGame {
         // TODO: Create instance WeightedQuickUnionUF class
         // (n1 * n2) + 4 because we need an extra 4 to check who's won
         wqu = new WeightedQuickUnionUF((n1 * n2) + 4);
-        EAST = board.length - 1;
-        WEST = board.length - 2;
-        NORTH = board.length - 3;
-        SOUTH = board.length - 4;
+        EAST = wqu.getId().length - 1;
+        WEST = wqu.getId().length - 2;
+        NORTH = wqu.getId().length - 3;
+        SOUTH = wqu.getId().length - 4;
 	}
 
 	/*
@@ -132,10 +132,8 @@ public class Hex implements BoardGame {
     private void unionise(int x, int y, int index) {
         if (currentPlayer == 1 && (x == 0 || x == n1 - 1 )) {
             connectHomes(x, y, index);
-            return;
         } else if (currentPlayer == 2 && (y == 0 || y == n2 - 1)) {
             connectHomes(x, y, index);
-            return;
         }
 
         if (y < n2 - 1 && board[x][y + 1] == currentPlayer) wqu.union(changeTo2D(x, y + 1), index);
@@ -155,9 +153,7 @@ public class Hex implements BoardGame {
         if (currentPlayer == 1) {
             if (y == 0) wqu.union(EAST, index);
             if (y == n2 - 1) wqu.union(WEST, index);
-        }
-
-        if (currentPlayer == 2) {
+        }else if (currentPlayer == 2) {
             if (x == 0) wqu.union(NORTH, index);
             if (x == n1 - 1) wqu.union(SOUTH, index);
         }
@@ -222,7 +218,6 @@ public class Hex implements BoardGame {
 		while (!hexGame.isWinner()) {
 			System.out.println("It's player " + hexGame.getCurrentPlayer()
 					+ "'s turn");
-            p
 			System.out.println("Enter x and y location:");
 			int x = StdIn.readInt();
 			int y = StdIn.readInt();
@@ -237,6 +232,7 @@ public class Hex implements BoardGame {
 	}
 
     public void printGrid() {
+
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < i; j++) {
                 StdOut.print("  ");

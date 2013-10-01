@@ -66,6 +66,10 @@ public class WeightedQuickUnionUF {
         count--;
     }
 
+    public int[] getId() {
+        return this.id;
+    }
+
 
     public static void main(String[] args) {
         int N = StdIn.readInt();
