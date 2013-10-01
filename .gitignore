@@ -10,7 +10,7 @@
 *.iml
 *.ipr
 *.iws
-.idea/
+
  
 ### Eclipse ###
 *.pydevproject

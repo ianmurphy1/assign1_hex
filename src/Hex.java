@@ -48,8 +48,10 @@ public class Hex implements BoardGame {
 	@Override
 	public void takeTurn(int x, int y) {
 
+
         if (validCoords(x, y) && isOpen(x, y)) {
             board[x][y] = currentPlayer;
+            printGrid();
             int index = changeTo2D(x, y);
             unionise(x, y, index);
             if (isWinner()) return;
@@ -71,9 +73,8 @@ public class Hex implements BoardGame {
      * @return
      */
     private int changeTo2D(int x, int y) {
-        return (x * board.length) + y;
+        return (x * n1) + y;
     }
-
 	
 
 	/*
@@ -183,10 +184,11 @@ public class Hex implements BoardGame {
 	 */
 	public static void main(String[] args) {
 
-		BoardGame hexGame = new Hex(4, 4);
+		BoardGame hexGame = new Hex(14, 14);
 
         System.out.println(hexGame.getBoard().length);
-        int arr[][] = hexGame.getBoard();
+
+        /*int arr[][] = hexGame.getBoard();
         while (!hexGame.isWinner()) {
         hexGame.takeTurn(2, 3);
         hexGame.takeTurn(0, 1);
@@ -216,8 +218,8 @@ public class Hex implements BoardGame {
         }
         System.out.println("It's over. Player " + hexGame.getCurrentPlayer()
                 + " wins!");
-        System.exit(0);
-		/*while (!hexGame.isWinner()) {
+        System.exit(0);*/
+		while (!hexGame.isWinner()) {
 			System.out.println("It's player " + hexGame.getCurrentPlayer()
 					+ "'s turn");
 			System.out.println("Enter x and y location:");
@@ -229,16 +231,19 @@ public class Hex implements BoardGame {
 		}
 
 		System.out.println("It's over. Player " + hexGame.getCurrentPlayer()
-				+ " wins!");*/
+				+ " wins!");
 
 	}
 
     public void printGrid() {
         for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board.length; j++) {
-                StdOut.print(board[i][j]);
+            for (int j = 0; j < i; j++) {
+                StdOut.print("  ");
             }
-            StdOut.println();
+            for (int j = 0; j < board.length; j++ ) {
+                StdOut.print("<" + board[i][j] + ">");
+            }
+            StdOut.println(" ");
         }
 
     }

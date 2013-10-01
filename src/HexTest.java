@@ -104,7 +104,6 @@ public class HexTest {
 		}
 		
 		assertTrue(hex.isWinner() && hex.getCurrentPlayer()==1);
-	
 		
 	}
 	
