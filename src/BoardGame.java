@@ -8,27 +8,27 @@ public interface BoardGame {
 
 	/**
 	 * Allows the current player to take their turn 
-	 * @param x - x coord on board
-	 * @param y - y coord on board
+	 * @param x - Row number on board
+	 * @param y - Column number on board
 	 */
 	public void takeTurn(int x, int y);
 
 	/**
 	 * Return current player in control of the game
-	 * @return int indcating current player
+	 * @return int indicating current player
 	 */
 	public int getCurrentPlayer();
 
 	
 	/**
 	 * Returns 2D array representing the current state of the board
-	 * @return
+	 * @return Board's 2D array
 	 */
 	public int[][] getBoard();
 
 	/**
 	 * Returns boolean indicating if there's a winner.
-	 * @return
+	 * @return Whether player has won or not
 	 */
 	public boolean isWinner();
 

@@ -35,10 +35,9 @@ public class HexTest {
     }
 
     /**
+     * This test checks a player 2 win scenario
      * This test was changed by me to take into account the method of coordinates to be [row][col].
      *
-     * This test checks a player 2 win scenario
-     * This is using the board as it is shown in the spec.
      * In this case, player 2 tries to connect the top to the bottom(Yellow edges in image in specification)
      */
     @Test
@@ -59,11 +58,10 @@ public class HexTest {
     }
 
 
-    /**
-     * This test was changed by me to take into account the method of coordinates to be [row][col].
-     * <p/>
+    /**     *
      * This test checks a player 2 win scenario.
-     * This is using the board as it is shown in the spec.
+     *
+     * This test was changed by me to take into account the method of coordinates to be [row][col].
      * In this case, player 2 tries to connect the left and right sides(Yellow edges in board in specification)
      */
     @Test
@@ -77,7 +75,7 @@ public class HexTest {
             assertTrue(hex.getCurrentPlayer() == 1);
             hex.takeTurn(j, 0);
             assertFalse(hex.isWinner());
-            hex.takeTurn(j, 1);
+            hex.takeTurn(j, 6);
             j++;
         }
 
