@@ -124,17 +124,11 @@ public class Hex implements BoardGame {
 	 */
 	@Override
 	public boolean isWinner() {
-        if (currentPlayer == 1) return wqu.connected(EAST, WEST);
-        else if (currentPlayer == 2) return wqu.connected(NORTH, SOUTH);
-        return false;
+        return wqu.connected(EAST, WEST) || wqu.connected(NORTH, SOUTH);
 	}
 
     private void unionise(int x, int y, int index) {
-        if (currentPlayer == 1 && (x == 0 || x == n1 - 1 )) {
-            connectHomes(x, y, index);
-        } else if (currentPlayer == 2 && (y == 0 || y == n2 - 1)) {
-            connectHomes(x, y, index);
-        }
+        connectHomes(x, y, index);
 
         if (y < n2 - 1 && board[x][y + 1] == currentPlayer) wqu.union(changeTo2D(x, y + 1), index);
 
@@ -180,7 +174,7 @@ public class Hex implements BoardGame {
 	 */
 	public static void main(String[] args) {
 
-		BoardGame hexGame = new Hex(14, 14);
+		BoardGame hexGame = new Hex(4, 4);
 
         System.out.println(hexGame.getBoard().length);
 
