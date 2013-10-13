@@ -111,6 +111,7 @@ public class Hex implements BoardGame {
 
 
     /**
+     * Method to change the current player to the next one.
      *
      */
     private void nextPlayer() {
@@ -147,20 +148,27 @@ public class Hex implements BoardGame {
 
         if (y > 0 && board[x][y - 1] == currentPlayer) wqu.union(changeTo2D(x, y - 1), index);
 
-        if (x > 0 && board[x - 1][y] == currentPlayer) wqu.union(changeTo2D(x - 1, y), index);
+        if (x > 0) {
+            if (board[x - 1][y] == currentPlayer) wqu.union(changeTo2D(x - 1, y), index);
 
-        if (x > 0 && y < n2 - 1 && board[x - 1][y + 1] == currentPlayer) wqu.union(changeTo2D(x - 1, y + 1), index);
+            if (y < n2 - 1 && board[x - 1][y + 1] == currentPlayer) wqu.union(changeTo2D(x - 1, y + 1), index);
+        }
 
-        if (x < n1 - 1 && board[x + 1][y] == currentPlayer) wqu.union(changeTo2D(x + 1, y), index);
+        if (x < n1 - 1) {
+            if (x < n1 - 1 && board[x + 1][y] == currentPlayer) wqu.union(changeTo2D(x + 1, y), index);
 
-        if (x < n1 - 1 && y > 0 && board[x + 1][y - 1] == currentPlayer) wqu.union(changeTo2D(x + 1, y - 1), index);
+            if (x < n1 - 1 && y > 0 && board[x + 1][y - 1] == currentPlayer) wqu.union(changeTo2D(x + 1, y - 1), index);
+        }
+
     }
 
     /**
+     * This method will check around the borders and if the player is connected to
+     * their corresponding home base then its connected.
      *
-     * @param x
-     * @param y
-     * @param index
+     * @param x The chosen x coordinate
+     * @param y The players chosen y coordinate
+     * @param index The x and y coordinates corresponding index in wqu's data structure
      */
     private void connectHomes(int x, int y, int index) {
         if (currentPlayer == 1) {
@@ -183,9 +191,10 @@ public class Hex implements BoardGame {
     }
 
     /**
+     * This method will return whether or not a grid spot is open.
      *
-     * @param x
-     * @param y
+     * @param x The player's x coordinate
+     * @param y The player's y coordinate
      * @return Whether board space is open
      */
     private boolean isOpen(int x, int y) {
