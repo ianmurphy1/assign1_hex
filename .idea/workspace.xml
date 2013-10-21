@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb66d0a1-e146-43f3-a02b-f34a9011f875" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Hex.java" afterPath="$PROJECT_DIR$/src/Hex.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HexTest.java" afterPath="$PROJECT_DIR$/src/HexTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WeightedQuickUnionUF.java" afterPath="$PROJECT_DIR$/src/WeightedQuickUnionUF.java" />
     </list>
     <ignored path="Hex.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -13,7 +11,7 @@
     <file path="/WeightedQuickUnionUF.java" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1382352112862" ignored="false" />
     <file path="/HexTest.java" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1382351631665" ignored="false" />
     <file path="/BoardGame.java" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1380743891928" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1382352153639" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="cb66d0a1-e146-43f3-a02b-f34a9011f875" time="1382357614017" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,7 @@
       <file leaf-file-name="Hex.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Hex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="64" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.93344426">
+            <state line="253" column="5" selection-start="7939" selection-end="7939" vertical-scroll-proportion="0.7737105">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -691,7 +689,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Hex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="64" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.93344426">
+        <state line="253" column="5" selection-start="7939" selection-end="7939" vertical-scroll-proportion="0.7737105">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
