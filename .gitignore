@@ -41,5 +41,8 @@ local.properties
 .buildpath
  
 ### Maven ###
-target/.idea/workspace.xml
+target/
+
+
+.idea/workspace.xml
 .idea/libraries/
