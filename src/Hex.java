@@ -1,3 +1,5 @@
+import edu.princeton.cs.introcs.StdIn;
+import edu.princeton.cs.introcs.StdOut;
 
 public class Hex implements BoardGame {
 
@@ -41,7 +43,7 @@ public class Hex implements BoardGame {
     }
 
     /**
-     *
+     * Method that allows the completion of a turn for a player.
      *
      * @param x Row number on board
      * @param y Column number on board
@@ -54,11 +56,13 @@ public class Hex implements BoardGame {
             // Set grid to be the current player
             board[x][y] = currentPlayer;
             // Change the x and y coords to the index of the quick union data structure
-            int index = changeTo2D(x, y);
+            int index = oneDify(x, y);
+            //Form unions with any neighbours that are valid and free.
             unionise(x, y, index);
             turnCount++;
             if ((turnCount >= (n1 + n2) - 1) && isWinner()) return;
             nextPlayer();
+            //Get the next player and jump out of method.
             return;
         }
 
@@ -66,7 +70,6 @@ public class Hex implements BoardGame {
         else if (!isOpen(x, y)) StdOut.println("Already Occupied.");
 
         StdOut.println("Re-Enter Co-Ordinates: ");
-
     }
 
     /**
@@ -77,7 +80,7 @@ public class Hex implements BoardGame {
      * @param y Column number
      * @return Index of grid position in flat array
      */
-    private int changeTo2D(int x, int y) {
+    private int oneDify(int x, int y) {
         return (x * n1) + y;
     }
 
@@ -93,6 +96,9 @@ public class Hex implements BoardGame {
     }
 
     /**
+     * Method that allows access to the private variable 'currentPlayer' so that it
+     * can be changed.
+     *
      * @param currentPlayer
      */
     public void setCurrentPlayer(int currentPlayer) {
@@ -134,7 +140,8 @@ public class Hex implements BoardGame {
 
     /**
      * This method checks the neighbours of the chosen grid location and if it finds the neighbours to be
-     * those of the same player will union them together in wqu's data structure.
+     * those of the same player will union them together in wqu's data structure. The method treats the border
+     * areas of the grid separately and uses these places for the union to the home indexes for the player.
      *
      * @param x Row coordinate
      * @param y Column coordinate
@@ -144,20 +151,20 @@ public class Hex implements BoardGame {
         // if co-ordinate is located around edge then call method to connect virtual sites
         if (x == 0 || y == 0 || x == n1 - 1 || y == n2 - 1) connectHomes(x, y, index);
 
-        if (y < n2 - 1 && board[x][y + 1] == currentPlayer) wqu.union(changeTo2D(x, y + 1), index);
+        if (y < n2 - 1 && board[x][y + 1] == currentPlayer) wqu.union(oneDify(x, y + 1), index);
 
-        if (y > 0 && board[x][y - 1] == currentPlayer) wqu.union(changeTo2D(x, y - 1), index);
+        if (y > 0 && board[x][y - 1] == currentPlayer) wqu.union(oneDify(x, y - 1), index);
 
         if (x > 0) {
-            if (board[x - 1][y] == currentPlayer) wqu.union(changeTo2D(x - 1, y), index);
+            if (board[x - 1][y] == currentPlayer) wqu.union(oneDify(x - 1, y), index);
 
-            if (y < n2 - 1 && board[x - 1][y + 1] == currentPlayer) wqu.union(changeTo2D(x - 1, y + 1), index);
+            if (y < n2 - 1 && board[x - 1][y + 1] == currentPlayer) wqu.union(oneDify(x - 1, y + 1), index);
         }
 
         if (x < n1 - 1) {
-            if (x < n1 - 1 && board[x + 1][y] == currentPlayer) wqu.union(changeTo2D(x + 1, y), index);
+            if (x < n1 - 1 && board[x + 1][y] == currentPlayer) wqu.union(oneDify(x + 1, y), index);
 
-            if (x < n1 - 1 && y > 0 && board[x + 1][y - 1] == currentPlayer) wqu.union(changeTo2D(x + 1, y - 1), index);
+            if (x < n1 - 1 && y > 0 && board[x + 1][y - 1] == currentPlayer) wqu.union(oneDify(x + 1, y - 1), index);
         }
 
     }

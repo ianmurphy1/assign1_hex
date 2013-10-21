@@ -1,3 +1,6 @@
+import edu.princeton.cs.introcs.StdIn;
+import edu.princeton.cs.introcs.StdOut;
+
 /****************************************************************************
  *  Compilation:  javac WeightedQuickUnionUF.java
  *  Execution:  java WeightedQuickUnionUF < input.txt
@@ -61,11 +64,21 @@ public class WeightedQuickUnionUF {
         if (i == j) return;
 
         // make smaller root point to larger one
-        if   (sz[i] < sz[j]) { id[i] = j; sz[j] += sz[i]; }
-        else                 { id[j] = i; sz[i] += sz[j]; }
+        if   (sz[i] < sz[j]) {
+            id[i] = j;
+            sz[j] += sz[i];
+        } else {
+            id[j] = i;
+            sz[i] += sz[j];
+        }
         count--;
     }
 
+    /**
+     * Method to allow access to the array of the data structure of WeightedQuickUnionFind.
+     *
+     * @return The board
+     */
     public int[] getId() {
         return this.id;
     }
