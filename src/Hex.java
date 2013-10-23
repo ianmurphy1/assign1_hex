@@ -194,7 +194,7 @@ public class Hex implements BoardGame {
      */
     private boolean validCoords(int x, int y) {
         //ANDed so it returns false as soon as an invalid coordinate is seen
-        return (x >= 0 && y >= 0 && x < n1 && y < n2);
+        return x >= 0 && y >= 0 && x < n1 && y < n2;
     }
 
     /**
@@ -225,8 +225,9 @@ public class Hex implements BoardGame {
             System.out.println("It's player " + hexGame.getCurrentPlayer()
                     + "'s turn");
             printGrid(hexGame.getBoard());
-            System.out.println("Enter x and y location:");
+            System.out.println("Enter Row: ");
             int x = StdIn.readInt();
+            System.out.println("Enter Column: ");
             int y = StdIn.readInt();
             hexGame.takeTurn(x, y);
         }
@@ -236,17 +237,21 @@ public class Hex implements BoardGame {
     }
 
     /**
+     * Method that prints out a grid that is passed into it in hex grid form... kinda.
      *
-     * @param arr
+     * @param arr Board to printed.
      */
     public static void printGrid(int[][] arr) {
-
+        StdOut.println("     [0] [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13]");
         for (int i = 0; i < arr.length; i++) {
+
+            StdOut.print(" [" + i + "] ");
             for (int j = 0; j < i; j++) {
                 StdOut.print("  ");
             }
-            for (int j = 0; j < arr.length; j++) {
-                StdOut.print("<" + arr[i][j] + ">");
+
+            for (int j = 0; j < arr[i].length; j++) {
+                StdOut.print("<" + arr[i][j] + "> ");
             }
             StdOut.println(" ");
         }
