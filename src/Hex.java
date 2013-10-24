@@ -1,6 +1,9 @@
 import edu.princeton.cs.introcs.StdIn;
 import edu.princeton.cs.introcs.StdOut;
 
+/**
+ * Class that contains the logic for the Hex game.
+ */
 public class Hex implements BoardGame {
 
     private int[][] board; // 2D Board. 0 - empty, 1 - Player 1, 2 - Player 2
