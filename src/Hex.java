@@ -85,10 +85,10 @@ public class Hex implements BoardGame {
     }
 
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Method that returns the current player.
      *
-     * @see BoardGame#getCurrentPlayer()
+     * @return The current player.
      */
     @Override
     public int getCurrentPlayer() {
@@ -105,10 +105,10 @@ public class Hex implements BoardGame {
         this.currentPlayer = currentPlayer;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Method that returns the 2D array belonging to the Hex class.
      *
-     * @see BoardGame#getBoard()
+     * @return The 2D array of Hex
      */
     @Override
     public int[][] getBoard() {
