@@ -134,10 +134,10 @@ public class Hex implements BoardGame {
 
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Method that checks whether the game has a winner.
      *
-     * @see BoardGame#isWinner()
+     * @return Whether the player has won or not.
      */
     @Override
     public boolean isWinner() {

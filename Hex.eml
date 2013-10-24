@@ -5,4 +5,7 @@
 	<lib name="stdlib.jar" scope="COMPILE">
 		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/stdlib.jar!/"/>
 	</lib>
+	<levels>
+		<level name="stdlib-package" value="project"/>
+	</levels>
 </component>
