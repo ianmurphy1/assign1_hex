@@ -15,11 +15,11 @@ public class Hex implements BoardGame {
 
     //Special sites for checking percolation
     //Player 1 takes EAST -> WEST
-    private int EAST;
-    private int WEST;
+    private final int EAST;
+    private final int WEST;
     //Player 2 takes NORTH -> SOUTH
-    private int NORTH;
-    private int SOUTH;
+    private final int NORTH;
+    private final int SOUTH;
 
     public Hex(int n1, int n2) // create N-by-N grid, with all sites blocked
     {
@@ -219,7 +219,7 @@ public class Hex implements BoardGame {
      */
     public static void main(String[] args) {
 
-        BoardGame hexGame = new Hex(4, 4);
+        BoardGame hexGame = new Hex(14, 14);
 
         while (!hexGame.isWinner()) {
             System.out.println("It's player " + hexGame.getCurrentPlayer()
@@ -233,7 +233,6 @@ public class Hex implements BoardGame {
         }
         System.out.println("It's over. Player " + hexGame.getCurrentPlayer()
                 + " wins!");
-
     }
 
     /**
@@ -255,6 +254,5 @@ public class Hex implements BoardGame {
             }
             StdOut.println(" ");
         }
-
     }
 }

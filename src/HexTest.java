@@ -13,6 +13,7 @@ import org.junit.Test;
  * I changed these slightly so that the tests would pass. The change was made due
  * to me using the arr[row][col] way of looking at the coordinates of the 2D array.
  *
+ *
  */
 public class HexTest {
 
