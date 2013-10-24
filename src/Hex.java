@@ -2,7 +2,10 @@ import edu.princeton.cs.introcs.StdIn;
 import edu.princeton.cs.introcs.StdOut;
 
 /**
- * Class that contains the logic for the Hex game.
+ * Class that contains the logic for the Hex game. The class includes a basic CLI
+ * version of the game so that it can be played.
+ *
+ * @author Ian Murphy - 20057028
  */
 public class Hex implements BoardGame {
 
@@ -248,13 +251,13 @@ public class Hex implements BoardGame {
         for (int i = 0; i < arr.length; i++) {
 
             StdOut.print(" [" + i + "] ");
-            for (int j = 0; j < i; j++) {
-                StdOut.print("  ");
-            }
 
-            for (int j = 0; j < arr[i].length; j++) {
+            for (int j = 0; j < i; j++)
+                StdOut.print("  ");
+
+            for (int j = 0; j < arr[i].length; j++)
                 StdOut.print("<" + arr[i][j] + "> ");
-            }
+
             StdOut.println(" ");
         }
     }
