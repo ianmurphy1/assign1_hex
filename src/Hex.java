@@ -57,8 +57,10 @@ public class Hex implements BoardGame {
      */
     @Override
     public void takeTurn(int x, int y) {
+        boolean valid = validCoords(x, y);
+
         // Check if valid and free space
-        if (validCoords(x, y) && isOpen(x, y)) {
+        if (valid && isOpen(x, y)) {
             // Set grid to be the current player
             board[x][y] = currentPlayer;
             // Change the x and y coords to the index of the quick union data structure
@@ -72,7 +74,7 @@ public class Hex implements BoardGame {
             return;
         }
 
-        if (!validCoords(x, y)) StdOut.println("Invalid Co-Ordinates");
+        if (!valid) StdOut.println("Invalid Co-Ordinates");
         else if (!isOpen(x, y)) StdOut.println("Already Occupied.");
 
         StdOut.println("Re-Enter Co-Ordinates: ");
@@ -168,9 +170,9 @@ public class Hex implements BoardGame {
         }
 
         if (x < n1 - 1) {
-            if (x < n1 - 1 && board[x + 1][y] == currentPlayer) wqu.union(oneDify(x + 1, y), index);
+            if (board[x + 1][y] == currentPlayer) wqu.union(oneDify(x + 1, y), index);
 
-            if (x < n1 - 1 && y > 0 && board[x + 1][y - 1] == currentPlayer) wqu.union(oneDify(x + 1, y - 1), index);
+            if (y > 0 && board[x + 1][y - 1] == currentPlayer) wqu.union(oneDify(x + 1, y - 1), index);
         }
 
     }
